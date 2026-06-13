@@ -1,0 +1,28 @@
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# data
+*.db
+*.sqlite
+*.sqlite3
+# python
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+# cmake/c
+cmake-build-*/
+CMakeFiles/
+Testing/
+examples/**/build*/
+# logs
+.codex-log/
+*.log

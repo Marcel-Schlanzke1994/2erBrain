@@ -1,0 +1,1 @@
+local e=require('event_engine'); local engine=e.new(); e.register(engine,'ok',function(ctx) return ctx.value end); local ok,res=e.emit(engine,'ok',{value=7}); assert(ok and res==7); local ok2=e.emit(engine,'missing',{}); assert(ok2==false); e.register(engine,'bad',function() error('boom') end); local ok3=e.emit(engine,'bad',{}); assert(ok3==false)
