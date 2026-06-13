@@ -1,0 +1,18 @@
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -e examples/python/knowledge_ingestion_api[dev]
+      - run: python scripts/run_all_checks.py
+      - run: cd examples/python/knowledge_ingestion_api && ruff check . && ruff format --check . && mypy src
+      - run: cd examples/c/event_parser && cmake -S . -B build && cmake --build build && ctest --test-dir build --output-on-failure
+      - run: cd examples/cpp/modular_gameplay_core && cmake -S . -B build && cmake --build build && ctest --test-dir build --output-on-failure
+      - run: cd examples/lua/gameplay_event_engine && lua tests/run_tests.lua
