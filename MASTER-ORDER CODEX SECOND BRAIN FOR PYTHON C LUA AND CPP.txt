@@ -1,0 +1,38 @@
+# Master Order: Codex Second Brain for Python, C, Lua, and C++
+
+This file records the English implementation brief that was applied to this repository.
+
+## Goal
+
+Build a modular, expandable Codex Second Brain under `docs/codex-second-brain/` for Python, C, Lua, and modern C++. The knowledge base must serve three purposes:
+
+1. Learning system: explain concepts step by step.
+2. Reference system: answer concrete development questions quickly.
+3. Engineering handbook: provide reliable rules, templates, checklists, examples, quality gates, and architecture decisions for production-grade code.
+
+## Required properties
+
+- All repository files, file names, code identifiers, and code comments are kept in English.
+- Documentation is RAG-friendly and starts with metadata where practical.
+- Security is considered by default: no real secrets, no `.env` content, safe placeholders only, explicit validation, least privilege, and logging without sensitive data.
+- Existing architecture is respected; new documentation lives under `docs/codex-second-brain/`.
+- Unexecuted examples are marked as not verified.
+- Sources are based on official documentation, standards, and primary project references.
+
+## Required content
+
+The implementation includes:
+
+- System documents: mission, navigation, glossary, source policy, roadmap, definition of done.
+- Language overview: comparison matrix, decision matrix, interoperability map.
+- Python track: foundations, types, functions, OOP, errors, files/databases, asyncio, testing, security, Flask/API/automation, AI/RAG/agents, pitfalls, cheat sheet, exercises.
+- C track: foundations, types, headers, arrays/strings/pointers, structs/enums/unions, memory, file I/O, bit operations, parsers/state machines, embedded systems, testing/static analysis, security, pitfalls, cheat sheet, exercises.
+- Lua track: foundations, tables, functions/closures/modules, metatables, errors, gameplay scripting, event and quest systems, sandboxing, C/C++ integration, testing/debugging, pitfalls, cheat sheet, exercises.
+- C++ track: foundations, types/references, classes/lifetime, RAII/smart pointers, STL, templates, errors, concurrency, performance, CMake/dependencies, Unreal foundations, gameplay architecture, networking, testing/static analysis, security, pitfalls, cheat sheet, exercises.
+- Cross-language documents: Python/C++ boundaries, Lua/C++ embedding, C/C++ interoperability, serialization, APIs, and language-selection rules.
+- Architecture documents: modular monolith vs services, clean architecture, dependencies, configuration, logging, databases, migrations, errors, testing, CI/CD, deployment.
+- Security documents: secrets, secure coding, validation, dependencies, auth, safe logging, incident response.
+- Reference projects: Python Knowledge Ingestion API, C Embedded Event Parser, Lua Gameplay Event Engine, C++ Modular Gameplay Core, and an integrated reference project.
+- Templates: agent instructions, README, ADR, review checklist, bug report, feature spec, and environment example template.
+- Evaluations: skills matrix, solutions, review questions, coding challenges, quality gates.
+- Sources: official sources and further reading.
