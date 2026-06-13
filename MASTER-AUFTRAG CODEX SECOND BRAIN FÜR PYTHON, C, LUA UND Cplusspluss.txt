@@ -1,0 +1,1193 @@
+# MASTER-AUFTRAG: CODEX SECOND BRAIN FÜR PYTHON, C, LUA UND C++
+
+## 0. Rolle und Arbeitsmodus
+
+Agiere als Principal Software Architect, Senior Software Engineer, technischer Dozent, Knowledge-Engineer und Security-Reviewer mit tiefgehender praktischer Erfahrung in:
+
+* Python
+* C
+* Lua
+* modernem C++
+* Softwarearchitektur
+* Embedded Systems
+* Game Development
+* Unreal Engine
+* API- und Backend-Entwicklung
+* Datenbanken
+* Testautomatisierung
+* CI/CD
+* Secure Coding
+* technischen Dokumentationen
+* RAG-freundlichen Wissenssystemen für KI-Assistenten und Coding-Agenten
+
+Arbeite wie ein autonomer Engineering-Agent. Erstelle nicht nur einen oberflächlichen Bericht. Baue eine langfristig nutzbare Wissensbasis auf, die später von einem Codex-Agenten als technisches Second Brain verwendet werden kann.
+
+Die Wissensbasis muss verständlich für Lernende sein, aber gleichzeitig präzise genug, damit ein Coding-Agent daraus produktionsreifen Code ableiten kann.
+
+## 1. Hauptziel
+
+Erstelle ein modulares und erweiterbares **Codex Second Brain**, das Python, C, Lua und C++ systematisch erklärt, miteinander vergleicht und auf reale Projekte anwendet.
+
+Das System soll drei Aufgaben gleichzeitig erfüllen:
+
+1. **Lernsystem:** Konzepte schrittweise und verständlich erklären.
+2. **Nachschlagewerk:** Schnelle, präzise Antworten für konkrete Entwicklungsfragen liefern.
+3. **Engineering-Handbuch:** Verlässliche Regeln, Vorlagen, Checklisten und Architekturentscheidungen für produktionsreifen Code bereitstellen.
+
+Das Second Brain soll später besonders für folgende Projekttypen einsetzbar sein:
+
+* Discord-Bots und Community-Systeme
+* Flask-Webanwendungen und REST-APIs
+* KI-gestützte Automatisierung
+* Datenbanken wie SQLite, PostgreSQL und MongoDB
+* Event-, Reminder- und Logging-Systeme
+* Embedded-Programmierung und hardwarenahe Aufgaben
+* Zustandsautomaten, Parser und Kommunikationsprotokolle
+* Unreal-Engine-Projekte
+* MMORPG-Systeme
+* Gameplay-Logik
+* Lua-basierte Event- und Quest-Skripte
+* modulare Agentensysteme
+* CI/CD und Railway-Deployments
+
+Das Ergebnis darf nicht lediglich aus allgemeinen Definitionen bestehen. Es muss konkrete Dateien, Lernmodule, Codebeispiele, Übungen, Qualitätsregeln und nachvollziehbare Architekturentscheidungen enthalten.
+
+## 2. Verbindliche Arbeitsregeln
+
+Beachte durchgehend folgende Regeln:
+
+### 2.1 Architektur vor Schnellschuss
+
+Analysiere zuerst die Anforderungen und entwirf die Struktur. Beginne danach mit der Umsetzung. Vermeide unverbundene Einzeldokumente ohne klare Navigation.
+
+### 2.2 Keine unbelegten Behauptungen
+
+Verwende für technische Fakten möglichst aktuelle Primärquellen:
+
+* offizielle Dokumentationen
+* offizielle Style Guides
+* Sprachstandards
+* anerkannte Core Guidelines
+* offizielle Tutorials der jeweiligen Projekte
+* Dokumentationen der verwendeten Tools
+
+Prüfe aktuelle Versionen, Standards und Tooling-Empfehlungen. Verlasse dich bei veränderlichen Informationen nicht auf veraltetes Wissen. Gib Quellen nachvollziehbar an.
+
+### 2.3 Sicherheit standardmäßig mitdenken
+
+* Gib niemals echte Tokens, Passwörter, API-Keys, Webhooks oder Zugangsdaten aus.
+* Lies keine Werte aus `.env`-Dateien aus und kopiere sie niemals in Dokumentationen.
+* Zeige ausschließlich Variablennamen und redigierte Platzhalter.
+* Lege bei Bedarf eine `.env.example` mit sicheren Platzhaltern an.
+* Stelle sicher, dass `.env`, lokale Datenbanken, Build-Artefakte und Secret-Dateien in `.gitignore` berücksichtigt werden.
+* Falls im Projekt bereits Secrets eingecheckt wurden, dokumentiere ausschließlich Fundorte und Variablennamen. Zeige keine Secret-Werte.
+* Weise auf notwendige Rotation kompromittierter Zugangsdaten hin.
+* Verwende Least Privilege, Eingabevalidierung, sichere Fehlerbehandlung und Logging ohne sensitive Daten.
+
+### 2.4 Bestehende Architektur respektieren
+
+Falls ein Repository verfügbar ist:
+
+1. Lies zuerst vorhandene Dateien wie `README.md`, `AGENTS.md`, `.gitignore`, Build-Dateien und CI-Konfigurationen.
+2. Analysiere die bestehende Verzeichnisstruktur.
+3. Überschreibe keine produktiven Dateien unkontrolliert.
+4. Erstelle neue Dokumentation bevorzugt unter:
+
+```text
+docs/codex-second-brain/
+```
+
+5. Falls bereits ein `AGENTS.md` existiert, respektiere dessen Regeln. Erstelle bei Bedarf eine ergänzende Vorlage oder einen klar dokumentierten Patch-Vorschlag.
+6. Führe keine Pushes, Deployments, Migrationen oder destruktiven Änderungen ohne ausdrückliche Freigabe durch.
+
+Falls kein Repository verfügbar ist, erzeuge eine eigenständig nutzbare Zielstruktur und dokumentiere exakt, wohin jede Datei später kopiert werden soll.
+
+### 2.5 Keine erfundenen Ergebnisse
+
+Behaupte niemals, dass ein Codebeispiel getestet, kompiliert oder ausgeführt wurde, wenn dies nicht tatsächlich erfolgt ist.
+
+Kennzeichne jedes Ergebnis eindeutig als:
+
+* `CREATED`
+* `UPDATED`
+* `VERIFIED`
+* `NOT VERIFIED`
+* `BLOCKED`
+* `RECOMMENDED NEXT STEP`
+
+### 2.6 Inkrementell und nachvollziehbar arbeiten
+
+Arbeite schrittweise. Dokumentiere nach jeder Phase:
+
+* erstellte Dateien
+* geänderte Dateien
+* ausgeführte Befehle
+* Testergebnisse
+* offene Risiken
+* verbleibende Aufgaben
+* nächste sinnvolle Schritte
+
+Stelle bei fehlenden Informationen keine unnötigen Rückfragen. Nutze sichere Standardannahmen und kennzeichne diese transparent. Frage nur nach, wenn eine falsche Annahme zu einem erheblichen Risiko führen würde.
+
+## 3. Sprache und Darstellungsform
+
+* Schreibe Erklärungen auf Deutsch.
+* Verwende für Quellcode englische Variablennamen, Funktionsnamen, Klassennamen und Dateinamen.
+* Schreibe Kommentare im Code bevorzugt auf Englisch, damit der Code international wartbar bleibt.
+* Erkläre neue Fachbegriffe beim ersten Auftreten verständlich.
+* Nutze konkrete Beispiele statt abstrakter Floskeln.
+* Zeige bei schwierigen Konzepten zuerst ein minimales Beispiel und danach eine realistische Anwendung.
+* Füge bei häufigen Fehlern jeweils ein fehlerhaftes und ein korrigiertes Beispiel ein.
+* Verwende Mermaid-Diagramme für Architekturen, Abläufe und Abhängigkeiten.
+* Erstelle übersichtliche Tabellen für Vergleiche und Entscheidungsregeln.
+* Vermeide unnötige Wiederholungen.
+
+## 4. Zielstruktur des Second Brain
+
+Erstelle mindestens folgende Struktur:
+
+```text
+docs/
+└── codex-second-brain/
+    ├── README.md
+    ├── 00-system/
+    │   ├── mission-and-scope.md
+    │   ├── navigation.md
+    │   ├── glossary.md
+    │   ├── source-policy.md
+    │   ├── learning-roadmap.md
+    │   └── definition-of-done.md
+    ├── 01-language-overview/
+    │   ├── language-comparison.md
+    │   ├── decision-matrix.md
+    │   └── interoperability-map.md
+    ├── 02-python/
+    │   ├── README.md
+    │   ├── 01-foundations.md
+    │   ├── 02-data-types-and-control-flow.md
+    │   ├── 03-functions-modules-packages.md
+    │   ├── 04-object-oriented-programming.md
+    │   ├── 05-error-handling.md
+    │   ├── 06-file-io-and-databases.md
+    │   ├── 07-asyncio-and-concurrency.md
+    │   ├── 08-testing-debugging-profiling.md
+    │   ├── 09-security.md
+    │   ├── 10-apis-flask-and-automation.md
+    │   ├── 11-ai-rag-and-agent-systems.md
+    │   ├── 12-common-pitfalls.md
+    │   ├── cheat-sheet.md
+    │   └── exercises.md
+    ├── 03-c/
+    │   ├── README.md
+    │   ├── 01-foundations.md
+    │   ├── 02-data-types-control-flow.md
+    │   ├── 03-functions-scope-and-header-files.md
+    │   ├── 04-arrays-strings-and-pointers.md
+    │   ├── 05-struct-enum-union.md
+    │   ├── 06-memory-management.md
+    │   ├── 07-file-io.md
+    │   ├── 08-bit-operations.md
+    │   ├── 09-state-machines-and-parsers.md
+    │   ├── 10-embedded-systems.md
+    │   ├── 11-testing-debugging-static-analysis.md
+    │   ├── 12-security.md
+    │   ├── 13-common-pitfalls.md
+    │   ├── cheat-sheet.md
+    │   └── exercises.md
+    ├── 04-lua/
+    │   ├── README.md
+    │   ├── 01-foundations.md
+    │   ├── 02-types-tables-and-control-flow.md
+    │   ├── 03-functions-closures-and-modules.md
+    │   ├── 04-metatables-and-object-patterns.md
+    │   ├── 05-error-handling.md
+    │   ├── 06-gameplay-scripting.md
+    │   ├── 07-event-and-quest-systems.md
+    │   ├── 08-sandboxing-and-security.md
+    │   ├── 09-c-cpp-integration.md
+    │   ├── 10-testing-debugging.md
+    │   ├── 11-common-pitfalls.md
+    │   ├── cheat-sheet.md
+    │   └── exercises.md
+    ├── 05-cpp/
+    │   ├── README.md
+    │   ├── 01-foundations.md
+    │   ├── 02-types-functions-and-references.md
+    │   ├── 03-classes-and-object-lifetime.md
+    │   ├── 04-raii-and-smart-pointers.md
+    │   ├── 05-stl-containers-and-algorithms.md
+    │   ├── 06-templates-and-generic-programming.md
+    │   ├── 07-error-handling.md
+    │   ├── 08-concurrency.md
+    │   ├── 09-performance-and-profiling.md
+    │   ├── 10-build-systems-and-dependencies.md
+    │   ├── 11-unreal-engine-foundations.md
+    │   ├── 12-gameplay-architecture.md
+    │   ├── 13-networking-basics.md
+    │   ├── 14-testing-debugging-static-analysis.md
+    │   ├── 15-security.md
+    │   ├── 16-common-pitfalls.md
+    │   ├── cheat-sheet.md
+    │   └── exercises.md
+    ├── 06-cross-language/
+    │   ├── python-cpp-boundaries.md
+    │   ├── lua-cpp-embedding.md
+    │   ├── c-and-cpp-interoperability.md
+    │   ├── serialization-and-message-contracts.md
+    │   ├── api-boundaries.md
+    │   └── when-to-use-which-language.md
+    ├── 07-architecture/
+    │   ├── modular-monolith-vs-services.md
+    │   ├── clean-architecture.md
+    │   ├── dependency-rules.md
+    │   ├── configuration-management.md
+    │   ├── logging-observability.md
+    │   ├── database-strategy.md
+    │   ├── migrations.md
+    │   ├── error-taxonomy.md
+    │   ├── testing-strategy.md
+    │   ├── ci-cd.md
+    │   └── deployment-checklist.md
+    ├── 08-security/
+    │   ├── secret-management.md
+    │   ├── secure-coding-checklist.md
+    │   ├── input-validation.md
+    │   ├── dependency-security.md
+    │   ├── authentication-and-authorization.md
+    │   ├── logging-without-data-leaks.md
+    │   └── incident-response.md
+    ├── 09-projects/
+    │   ├── README.md
+    │   ├── python-knowledge-ingestion-api.md
+    │   ├── c-event-parser.md
+    │   ├── lua-game-event-engine.md
+    │   ├── cpp-modular-gameplay-core.md
+    │   └── integrated-second-brain-reference-project.md
+    ├── 10-templates/
+    │   ├── AGENTS.second-brain.template.md
+    │   ├── README.template.md
+    │   ├── ADR.template.md
+    │   ├── code-review-checklist.md
+    │   ├── bug-report.template.md
+    │   ├── feature-spec.template.md
+    │   └── .env.example.template
+    ├── 11-evaluations/
+    │   ├── skills-matrix.md
+    │   ├── exercise-solutions.md
+    │   ├── review-questions.md
+    │   ├── coding-challenges.md
+    │   └── quality-gates.md
+    └── 12-sources/
+        ├── official-sources.md
+        └── further-reading.md
+```
+
+Falls eine andere Struktur sinnvoller ist, darfst du sie verbessern. Begründe Änderungen nachvollziehbar.
+
+## 5. RAG-freundliche Dokumentation
+
+Strukturiere jedes Wissensdokument so, dass ein KI-Agent später gezielt relevante Abschnitte abrufen kann.
+
+Jede Datei soll möglichst folgende Metadaten am Anfang enthalten:
+
+```yaml
+---
+title: "..."
+language: "python | c | lua | cpp | cross-language | architecture | security"
+level: "foundation | intermediate | advanced | production"
+topics:
+  - "..."
+related:
+  - "..."
+last_verified: "YYYY-MM-DD"
+source_type: "official-docs | standard | guideline | derived-example"
+---
+```
+
+Beachte zusätzlich:
+
+* Ein Dokument behandelt ein klar abgegrenztes Thema.
+* Jeder Abschnitt soll auch isoliert verständlich sein.
+* Verwende präzise Überschriften.
+* Verlinke verwandte Dokumente.
+* Vermeide gigantische Dateien mit unstrukturierten Textwänden.
+* Ergänze Suchbegriffe und Synonyme bei wichtigen Konzepten.
+* Trenne Grundlagen, fortgeschrittene Themen und produktive Anwendungen.
+* Unterscheide Fakten, Empfehlungen und projektabhängige Entscheidungen sichtbar voneinander.
+
+## 6. Anforderungen pro Sprache
+
+Bearbeite für jede Sprache alle folgenden Kategorien. Behandle sie nicht nur stichpunktartig, sondern mit verständlichen Erklärungen, Codebeispielen, Fehlerbeispielen, Übungen und realen Anwendungsszenarien.
+
+### 6.1 Python
+
+Erkläre Python als bevorzugte Sprache für schnelle Entwicklung, Automatisierung, Backends, Datenverarbeitung und KI-Integration.
+
+Behandle mindestens:
+
+* Syntax und Einrückung
+* Variablen und dynamische Typisierung
+* primitive Datentypen
+* Listen, Tupel, Sets und Dictionaries
+* Kontrollstrukturen
+* Funktionen
+* Parameter
+* Rückgabewerte
+* Scope
+* Type Hints
+* Module und Pakete
+* virtuelle Umgebungen
+* Abhängigkeitsmanagement
+* Klassen und Objektorientierung
+* Dataclasses
+* Exceptions
+* eigene Exceptions
+* Context Manager
+* Datei-I/O
+* JSON
+* CSV
+* SQLite
+* PostgreSQL
+* MongoDB-Grundlagen
+* REST-APIs
+* Flask
+* Konfiguration über Umgebungsvariablen
+* Logging
+* `asyncio`
+* Threads und Prozesse
+* Unit-Tests
+* `pytest`
+* Mocking
+* Linting
+* Formatting
+* Typprüfung
+* Debugging
+* Profiling
+* sichere Eingabevalidierung
+* Secret-Management
+* Discord-Bot-Architekturen
+* Agentensysteme
+* RAG-Pipelines
+* robuste API-Clients
+* Retry-Logik
+* Rate-Limiting
+* saubere Projektstruktur
+
+Zeige konkrete Beispiele für:
+
+1. einen kleinen Flask-Endpunkt
+2. ein Repository-Pattern für Datenbankzugriffe
+3. einen Discord-Bot-Cog
+4. asynchrone API-Aufrufe
+5. Logging mit Fehlerbehandlung
+6. einen Unit-Test mit `pytest`
+7. eine sichere Konfiguration mit `.env.example`
+8. eine einfache Knowledge-Ingestion-Pipeline
+
+### 6.2 C
+
+Erkläre C als Sprache für hardwarenahe Programmierung, Embedded Systems, Speicherverständnis, Treiberlogik und performante Basismodule.
+
+Behandle mindestens:
+
+* Übersetzungseinheiten
+* Compiler und Linker
+* `main`
+* Variablen und Datentypen
+* Operatoren
+* Kontrollstrukturen
+* Funktionen
+* Parameterübergabe
+* Rückgabewerte
+* Scope
+* Header-Dateien
+* Include Guards
+* Makros
+* Arrays
+* Strings
+* Pointer
+* Pointer-Arithmetik
+* Call-by-Value
+* Übergabe über Pointer
+* `struct`
+* `enum`
+* `union`
+* `typedef`
+* Speicherbereiche
+* Stack und Heap
+* `malloc`
+* `calloc`
+* `realloc`
+* `free`
+* Speicherlecks
+* Dangling Pointer
+* Null Pointer
+* Buffer Overflows
+* Datei-I/O
+* Bitoperationen
+* Flags und Masken
+* Zustandsautomaten
+* Moore- und Mealy-Automaten
+* Parser
+* serielle Kommunikation
+* Nachrichtenrahmen
+* Start- und End-Bytes
+* Timer
+* Interrupt-Grundlagen
+* Registerzugriffe
+* Embedded-Designprinzipien
+* Fehlercodes
+* Defensive Programming
+* Unit-Tests für C
+* Debugging
+* Compiler-Warnungen
+* Sanitizer
+* statische Analyse
+
+Zeige konkrete Beispiele für:
+
+1. saubere Trennung von `.h` und `.c`
+2. Übergabe eines Werts über einen Pointer
+3. sicheren Umgang mit Arrays
+4. einen kleinen Nachrichtenparser
+5. einen Zustandsautomaten
+6. Bitmasken
+7. sichere Speicherverwaltung
+8. Fehlercodes über `enum`
+9. einen Test-Harness für hardwarenahe Logik
+
+### 6.3 Lua
+
+Erkläre Lua als leichtgewichtige Skriptsprache für dynamische Gameplay-Logik, Konfiguration, Events, Quests, NPC-Verhalten und Laufzeitanpassungen.
+
+Behandle mindestens:
+
+* Syntax
+* dynamische Typisierung
+* lokale und globale Variablen
+* Kontrollstrukturen
+* Funktionen
+* Rückgabewerte
+* Tabellen
+* Arrays
+* Dictionaries
+* Tabellen als Objekte
+* Closures
+* Higher-Order Functions
+* Module
+* `require`
+* Metatables
+* Metamethoden
+* objektorientierte Muster
+* Fehlerbehandlung
+* `assert`
+* `pcall`
+* `xpcall`
+* Dateizugriffe
+* JSON-ähnliche Datenstrukturen
+* Konfiguration
+* Event-Handler
+* Quest-Skripte
+* NPC-Verhalten
+* Cooldowns
+* Belohnungslogik
+* Gameplay-Regeln
+* C-API
+* C++-Embedding
+* Sandboxing
+* Whitelisting
+* Schutz vor gefährlichen Funktionen
+* Laufzeitlimits
+* Logging
+* Tests
+* Debugging
+* typische Fehler durch globale Zustände
+
+Zeige konkrete Beispiele für:
+
+1. ein Lua-Modul
+2. ein Event-System
+3. eine Questdefinition
+4. NPC-Verhalten
+5. eine konfigurierbare Belohnungstabelle
+6. eine sichere Sandbox
+7. eine Schnittstelle zwischen C++ und Lua
+8. Fehlerbehandlung mit `pcall`
+
+### 6.4 C++
+
+Erkläre modernes C++ als Sprache für performante Systeme, Game-Engines, Unreal Engine, Gameplay-Systeme, Plugins und Ressourcenverwaltung.
+
+Nutze moderne C++-Prinzipien. Vermeide veraltete Empfehlungen, sofern sie nicht ausdrücklich als historische oder problematische Varianten erklärt werden.
+
+Behandle mindestens:
+
+* Compiler und Build-Prozess
+* Header und Source Files
+* Namespaces
+* Variablen
+* Typen
+* Referenzen
+* Pointer
+* `const`
+* Funktionen
+* Überladung
+* Klassen
+* Konstruktoren
+* Destruktoren
+* Sichtbarkeit
+* Vererbung
+* Komposition
+* Polymorphie
+* virtuelle Funktionen
+* Interfaces
+* Objektlebensdauer
+* RAII
+* Smart Pointer
+* `std::unique_ptr`
+* `std::shared_ptr`
+* `std::weak_ptr`
+* Move Semantics
+* Copy Semantics
+* Rule of Zero
+* Rule of Five
+* STL
+* `std::vector`
+* `std::array`
+* `std::string`
+* `std::unordered_map`
+* Algorithmen
+* Iteratoren
+* Templates
+* Concepts
+* Lambdas
+* Exceptions
+* Fehlercodes und Result-Typen
+* Threads
+* Synchronisierung
+* Deadlocks
+* Datenrennen
+* Performance
+* Profiling
+* Cache-Bewusstsein
+* Build-Systeme
+* CMake-Grundlagen
+* Paketmanagement
+* Unit-Tests
+* Debugging
+* Sanitizer
+* statische Analyse
+* Secure Coding
+* Unreal Engine Grundlagen
+* `UObject`
+* `AActor`
+* `UActorComponent`
+* Gameplay-Komponenten
+* Subsystems
+* Delegates
+* Events
+* Interfaces
+* Blueprint-Integration
+* Gameplay Ability System als weiterführendes Thema
+* Trennung zwischen Engine-Code und Gameplay-Regeln
+* Lua-Anbindung
+* Netzwerkgrundlagen
+* Client-Server-Denken
+* Replikation als Unreal-Engine-Thema
+
+Zeige konkrete Beispiele für:
+
+1. eine kleine RAII-Klasse
+2. den korrekten Einsatz eines `std::unique_ptr`
+3. Komposition statt unnötiger Vererbung
+4. eine modulare Gameplay-Komponente
+5. ein Event-Bus-Grundmuster
+6. ein kleines CMake-Projekt
+7. Unit-Tests
+8. C++-zu-Lua-Integration
+9. eine Unreal-nahe Klassenstruktur, ohne unnötig Engine-Code vorzutäuschen
+
+## 7. Sprachvergleich und Entscheidungsregeln
+
+Erstelle eine klare Vergleichsmatrix mit mindestens folgenden Kriterien:
+
+* Lernkurve
+* Lesbarkeit
+* Ausführungsgeschwindigkeit
+* Speicherkontrolle
+* Fehlerrisiko
+* Testbarkeit
+* Wartbarkeit
+* Portabilität
+* Embedded-Eignung
+* Backend-Eignung
+* KI-Eignung
+* Game-Engine-Eignung
+* Gameplay-Scripting
+* Unreal-Engine-Eignung
+* Teamfähigkeit
+* Deployment-Aufwand
+* typische Risiken
+* geeignete Projektgrößen
+
+Erstelle danach eine Entscheidungshilfe nach dem Muster:
+
+```text
+Nutze Python, wenn ...
+Nutze C, wenn ...
+Nutze Lua, wenn ...
+Nutze C++, wenn ...
+Kombiniere Python und C++, wenn ...
+Kombiniere C++ und Lua, wenn ...
+Verwende C statt C++, wenn ...
+Verwende Lua statt fest kompilierter Gameplay-Logik, wenn ...
+```
+
+Erkläre auch, wann eine Sprache ungeeignet ist.
+
+## 8. Cross-Language-Architektur
+
+Entwirf eine robuste Referenzarchitektur für ein Second-Brain- und Game-System mit klaren Zuständigkeiten:
+
+```text
+Python:
+- Orchestrierung
+- Automatisierung
+- APIs
+- Discord-Bots
+- Datenverarbeitung
+- KI- und RAG-Pipelines
+- Administration
+
+C:
+- Embedded-nahe Komponenten
+- Protokollparser
+- Mikrocontrollerlogik
+- Hardwareabstraktion
+- kleine performante Basismodule
+
+C++:
+- performanter Game-Core
+- Unreal-Engine-Module
+- Echtzeitlogik
+- komplexe Systemkomponenten
+- kontrollierte Ressourcenverwaltung
+
+Lua:
+- konfigurierbare Events
+- Quests
+- NPC-Verhalten
+- Gameplay-Regeln
+- dynamische Anpassungen ohne Neukompilierung
+```
+
+Erstelle dazu:
+
+* ein Mermaid-Architekturdiagramm
+* klare API-Grenzen
+* Datenverträge
+* Serialisierungsregeln
+* Fehlergrenzen
+* Logging-Konzept
+* Sicherheitsgrenzen
+* Testschnittstellen
+* Hinweise zur Versionierung von Verträgen
+
+Vergleiche geeignete Kommunikationsformen:
+
+* direkte Funktionsaufrufe
+* C-API
+* Lua-C-API
+* Bindings
+* JSON
+* Message Queue
+* REST
+* WebSocket
+* Datei-basierte Konfiguration
+
+Erkläre, wann welche Variante sinnvoll ist.
+
+## 9. Referenzprojekte
+
+Erstelle vier kleine Einzelprojekte und ein integriertes Referenzprojekt.
+
+### 9.1 Python: Knowledge Ingestion API
+
+Ziel:
+
+* Markdown-Dateien erfassen
+* Metadaten lesen
+* Inhalte indexieren
+* Speicherung in SQLite
+* Such-Endpunkt über Flask
+* strukturierte Fehlerbehandlung
+* Logging
+* Tests mit `pytest`
+* sichere Konfiguration
+
+### 9.2 C: Embedded Event Parser
+
+Ziel:
+
+* Nachrichten mit Start-Byte, Nutzdaten und End-Byte verarbeiten
+* Zustände sauber modellieren
+* Fehlerfälle erkennen
+* keine Buffer Overflows
+* Test-Harness ohne Hardware bereitstellen
+* Header und Implementierung sauber trennen
+
+### 9.3 Lua: Gameplay Event Engine
+
+Ziel:
+
+* Events deklarativ definieren
+* Bedingungen prüfen
+* Belohnungen konfigurieren
+* Module verwenden
+* globale Zustände vermeiden
+* Fehler sicher abfangen
+* Sandbox-Prinzipien erklären
+
+### 9.4 C++: Modular Gameplay Core
+
+Ziel:
+
+* saubere Komponentenarchitektur
+* Event-Bus
+* RAII
+* Smart Pointer
+* Tests
+* CMake
+* erweiterbare Schnittstellen
+* Lua-Integration vorbereiten
+* Unreal-Engine-Übertragbarkeit erklären
+
+### 9.5 Integriertes Referenzprojekt
+
+Entwirf ein kleines, aber realistisches Gesamtsystem:
+
+```text
+Python Control Plane
+        |
+        v
+REST / Message Contract
+        |
+        v
+C++ Gameplay Core
+        |
+        v
+Lua Gameplay Scripts
+
+Optional:
+C Embedded Event Node
+        |
+        v
+Serialized Events
+        |
+        v
+Python Control Plane
+```
+
+Dokumentiere:
+
+* Verzeichnisstruktur
+* Datenfluss
+* Zuständigkeiten
+* Schnittstellen
+* Sicherheitsmaßnahmen
+* Tests
+* lokale Ausführung
+* Erweiterungsmöglichkeiten
+* bekannte Grenzen
+
+## 10. Lernpfad
+
+Erstelle einen realistischen Lernpfad in Stufen.
+
+### Stufe 1: Fundament
+
+Ziel:
+
+* grundlegende Syntax
+* Datentypen
+* Kontrollstrukturen
+* Funktionen
+* kleine Programme
+* Debugging-Grundlagen
+
+### Stufe 2: Strukturierter Code
+
+Ziel:
+
+* Module
+* Dateien
+* Klassen oder Strukturen
+* Fehlerbehandlung
+* Tests
+* saubere Namensgebung
+* Git-Grundlagen
+
+### Stufe 3: Systemsicht
+
+Ziel:
+
+* Speicher
+* Datenbanken
+* APIs
+* asynchrone Abläufe
+* Zustandsautomaten
+* Build-Prozesse
+* Logging
+* Security
+
+### Stufe 4: Produktive Anwendungen
+
+Ziel:
+
+* Discord-Bot
+* Flask-API
+* Embedded Parser
+* Lua-Event-System
+* C++ Gameplay-Core
+* CI/CD
+* sichere Konfiguration
+
+### Stufe 5: Fortgeschrittene Architektur
+
+Ziel:
+
+* Cross-Language-Integration
+* Contract-Versionierung
+* Agentensysteme
+* RAG
+* Performance
+* Profiling
+* Unreal-Engine-Architektur
+* testbare Gameplay-Systeme
+
+Erstelle zusätzlich:
+
+* Wochenplan
+* Reihenfolge der Themen
+* Lernziele
+* Übungen
+* Mini-Projekte
+* Abschlussprojekte
+* Selbstkontrollfragen
+* Kriterien, wann ein Thema als beherrscht gilt
+
+## 11. Übungen und Evaluation
+
+Erstelle für jede Sprache:
+
+* Verständnisfragen
+* Multiple-Choice-Fragen
+* kleine Code-Leseaufgaben
+* Debugging-Aufgaben
+* Erweiterungsaufgaben
+* Mini-Projekte
+* Musterlösungen
+* häufige Fehlannahmen
+* Bewertungskriterien
+
+Ordne jede Aufgabe einem Niveau zu:
+
+```text
+FOUNDATION
+INTERMEDIATE
+ADVANCED
+PRODUCTION
+```
+
+Erstelle außerdem eine Skills-Matrix von 0 bis 100 Punkten pro Themengebiet. Verwende klare Kriterien. Eine hohe Bewertung darf nicht nur durch theoretisches Wissen entstehen. Praktische Umsetzung, Tests, Debugging und Architekturverständnis müssen einfließen.
+
+## 12. Code-Qualitätsregeln
+
+Definiere sprachspezifische Quality Gates.
+
+### Python
+
+Prüfe nach Möglichkeit:
+
+```bash
+python -m pytest -q
+ruff check .
+ruff format --check .
+mypy .
+```
+
+Falls ein Tool nicht verfügbar ist, dokumentiere dies.
+
+### C
+
+Prüfe nach Möglichkeit mit strengen Warnungen:
+
+```bash
+gcc -std=c17 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Werror
+```
+
+Verwende bei geeigneter Umgebung zusätzlich Sanitizer und statische Analyse.
+
+### Lua
+
+Prüfe nach Möglichkeit:
+
+```bash
+luacheck .
+```
+
+Ergänze Tests für Module und Event-Logik.
+
+### C++
+
+Prüfe nach Möglichkeit:
+
+```bash
+cmake -S . -B build
+cmake --build build
+ctest --test-dir build --output-on-failure
+```
+
+Nutze geeignete Warnungen, Sanitizer und statische Analyse, sofern die Umgebung dies erlaubt.
+
+Für alle Sprachen gilt:
+
+* keine ungeprüften Eingaben
+* keine still verschluckten Fehler
+* keine geheimen Zugangsdaten im Code
+* keine unnötigen globalen Zustände
+* keine unklaren Seiteneffekte
+* klare Verantwortlichkeiten
+* möglichst deterministische Tests
+* nachvollziehbares Logging
+* kleine und wartbare Module
+* dokumentierte Schnittstellen
+
+## 13. AGENTS.md-Vorlage
+
+Erstelle eine Vorlage `AGENTS.second-brain.template.md`, die ein Coding-Agent später als verbindliche Arbeitsanweisung nutzen kann.
+
+Sie soll mindestens enthalten:
+
+* zuerst bestehende Architektur analysieren
+* keine Secrets ausgeben oder committen
+* `.env` niemals öffnen oder kopieren
+* Änderungen inkrementell durchführen
+* für jede Änderung passende Tests ausführen
+* Linting und statische Analyse verwenden
+* keine produktiven Deployments ohne Freigabe
+* keine destruktiven Migrationen ohne Backup und Freigabe
+* Dateipfade exakt nennen
+* Annahmen sichtbar machen
+* keine erfundenen Testergebnisse
+* Sicherheitsrisiken priorisieren
+* bestehende Namenskonventionen respektieren
+* kleine, überprüfbare Commits empfehlen
+* bei Fehlern Ursache, Fix und Verifikation dokumentieren
+* bei neuen Features zuerst Datenfluss, Schnittstellen und Fehlerfälle beschreiben
+* bei Cross-Language-Code Lebensdauer, Ownership und Fehlergrenzen dokumentieren
+
+## 14. Quellen und Ressourcen
+
+Erstelle für jede Sprache eine kuratierte Ressourcenliste mit Einordnung:
+
+* offizielle Dokumentation
+* Style Guides
+* Bücher
+* seriöse Tutorials
+* Übungsplattformen
+* Debugging-Tools
+* Linter
+* Formatter
+* Test-Frameworks
+* Build-Tools
+* weiterführende Ressourcen
+
+Bewerte jede Ressource kurz:
+
+* Zielgruppe
+* Schwierigkeit
+* Nutzen
+* empfohlener Zeitpunkt im Lernpfad
+* kostenlos oder kostenpflichtig
+* Referenzwerk oder Kurs
+
+Priorisiere kostenlose und offizielle Ressourcen. Kennzeichne kostenpflichtige Angebote deutlich.
+
+## 15. Phasen der Umsetzung
+
+Arbeite in folgender Reihenfolge.
+
+### Phase 0: Bestandsaufnahme
+
+* Repository-Struktur analysieren, falls verfügbar
+* bestehende Dokumentation erfassen
+* vorhandene Regeln identifizieren
+* mögliche Sicherheitsrisiken redigiert dokumentieren
+* relevante Technologien erfassen
+* Zielstruktur bestätigen oder sinnvoll verbessern
+
+### Phase 1: Architektur und Navigation
+
+* Hauptstruktur erzeugen
+* `README.md`
+* Navigation
+* Mission
+* Glossar
+* Quellenstrategie
+* Definition of Done
+* Lernpfad
+* Vergleichsmatrix
+
+### Phase 2: Python-Wissenskern
+
+* vollständige Python-Dokumentation
+* Beispiele
+* Übungen
+* Referenzprojekt
+* Quality Gates
+
+### Phase 3: C-Wissenskern
+
+* vollständige C-Dokumentation
+* Beispiele
+* Übungen
+* Embedded-Parser
+* Quality Gates
+
+### Phase 4: Lua-Wissenskern
+
+* vollständige Lua-Dokumentation
+* Beispiele
+* Übungen
+* Gameplay-Event-System
+* Sandbox
+* Quality Gates
+
+### Phase 5: C++-Wissenskern
+
+* vollständige moderne C++-Dokumentation
+* Beispiele
+* Übungen
+* modularer Gameplay-Core
+* Unreal-Übertragung
+* Quality Gates
+
+### Phase 6: Cross-Language-Architektur
+
+* Schnittstellen
+* Bindings
+* Datenverträge
+* Fehlergrenzen
+* Referenzarchitektur
+* integriertes Projekt
+
+### Phase 7: Security und Produktionsreife
+
+* Secret-Management
+* Input-Validierung
+* Logging
+* Authentifizierung
+* Abhängigkeiten
+* CI/CD
+* Deployment-Checkliste
+* Incident-Response
+
+### Phase 8: Evaluation und Abschlussprüfung
+
+* Linkprüfung
+* Strukturprüfung
+* Testausführung, soweit möglich
+* Qualitätsbericht
+* offene Punkte
+* priorisierter Backlog
+* nächste Lernschritte
+
+Beende die Arbeit nicht nach einer Gliederung. Setze die Dokumente tatsächlich um. Falls die verfügbare Arbeitsumgebung eine vollständige Umsetzung begrenzt, erstelle einen klaren Fortschrittsstand und fahre mit dem nächstmöglichen Teil fort.
+
+## 16. Ausgabestruktur nach jeder Phase
+
+Gib nach jeder abgeschlossenen Phase einen kompakten Statusbericht aus:
+
+```markdown
+## Phase X abgeschlossen
+
+### Erstellt
+- `path/to/file.md`
+
+### Aktualisiert
+- `path/to/file.md`
+
+### Verifiziert
+- Prüfungen und Ergebnisse
+
+### Sicherheitsprüfung
+- relevante Erkenntnisse, ausschließlich redigiert
+
+### Offene Punkte
+- verbleibende Aufgaben
+
+### Nächste Schritte
+- priorisierte Fortsetzung
+```
+
+## 17. Definition of Done
+
+Die Aufgabe ist erst abgeschlossen, wenn:
+
+* alle vier Sprachen systematisch dokumentiert sind
+* jede Sprache Grundlagen, Fortgeschrittenenthemen und produktive Beispiele enthält
+* typische Fehler sichtbar erklärt werden
+* Übungen und Lösungen vorhanden sind
+* die Vergleichsmatrix vollständig ist
+* ein Cross-Language-Architekturmodell existiert
+* mindestens vier Einzelprojekte und ein integriertes Referenzprojekt dokumentiert sind
+* Security-Regeln vorhanden sind
+* eine AGENTS.md-Vorlage existiert
+* Quality Gates dokumentiert sind
+* Quellen nachvollziehbar aufgeführt sind
+* die Wissensbasis navigierbar ist
+* alle nicht verifizierten Punkte deutlich markiert sind
+* ein priorisierter Backlog für zukünftige Erweiterungen existiert
+
+## 18. Qualitätsanspruch
+
+Arbeite präzise, systematisch und praxisnah.
+
+Vermeide:
+
+* allgemeine Aussagen ohne Beispiele
+* ungetestete Behauptungen
+* veraltete Best Practices
+* unsichere Codebeispiele
+* unstrukturierte Textblöcke
+* unnötige Komplexität
+* kopierte Secrets
+* versteckte Annahmen
+* Vermischung von Fakten und Empfehlungen
+
+Bevorzuge:
+
+* klare Lernschritte
+* kleine, ausführbare Beispiele
+* sichere Standardlösungen
+* nachvollziehbare Architektur
+* saubere Dateipfade
+* robuste Module
+* Tests
+* Diagramme
+* Checklisten
+* konkrete Anwendungsszenarien
+* transparente Grenzen
+
+## 19. Startbefehl
+
+Beginne jetzt mit Phase 0 und Phase 1.
+
+Falls ein Repository eingebunden ist, analysiere es zuerst. Falls kein Repository eingebunden ist, erstelle die Wissensbasis als eigenständige Struktur unter:
+
+```text
+docs/codex-second-brain/
+```
+
+Arbeite anschließend autonom die weiteren Phasen ab. Halte den Fortschritt nachvollziehbar fest. Stoppe nicht nach einer reinen Planung.
